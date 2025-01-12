@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.survey-form');
 
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit',  (event) => {
         event.preventDefault();
 
         const name = document.getElementById('name').value;
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const languages = [];
         const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-        checkboxes.forEach(function (checkbox) {
-            languages.push(checkbox.name);
+        checkboxes.forEach(function ($checkbox) {
+            languages.push($checkbox.name);
         });
 
         console.log('Name:', name);
